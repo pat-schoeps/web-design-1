@@ -1,0 +1,133 @@
+<div class="container container-instruments">
+		<!--	<header class="clearfix">
+				<h1> Projects</h1>
+			</header>	 -->
+			
+			<div class="row instruments-row">
+				<div class="col-md-6 instruments-grid1">
+					<h1>Instruments</h1>
+					<h2>We'll build just about anything.</h2>
+				</div>
+				<div class="col-md-6 instruments-grid2">
+					
+					<section class="instruments-top-banner">
+						<h2>See where and how we create.</h2>
+					</section>
+					
+				  <section class="instruments-bottom-right">
+				  	<a href="#" id="link1"><div>
+					  <h2>Projects</h2>
+					</div></a>
+				  </section>
+				  
+				  <section class="instruments-bottom-left">
+				  	<a href="#" id="link2"><div>
+				  		<h2>Where we Build</h2>
+				  	</div></a>
+				  </section>
+				</div>
+			</div>
+		
+<a name="id1"></a>
+		<figure class="container-instruments-background">
+		  <img src="<%= image_path('instruments/train.jpg') %>" alt="img 01" class="train" />  
+			<div class="main">
+				<div id="cbp-contentslider" class="cbp-contentslider">
+					<ul>
+						<li id="slide1">
+							<h3>PVC</h3>
+							<div>
+								<div class="cbp-content">
+									<p>Our PVC Instrument is a low cost, easy to make instrument that uses a simple formula relating tube length and diameter to note frequency.  Using this method we were able to create a two octave system providing a wide range of playability.</p>
+									<p>In order to provide the best tone, we glued dense foam to the end of paint scrapers.  This form gave us the feel drums stick like feel we wanted as well as the flat surface needed to produce good tone.</p>
+								</div>
+							</div>
+						</li>
+						<li id="slide2">
+							<h3>Slap Bass</h3>
+							<div>
+								<div class="cbp-content">
+									<p>The Slap Bass is an experimental instrument aimed at combinding the domains of string and percussive instruments.  We built a standard Bass Guitar using 2 x 4's and pickups, and then laid the design flat on its back.  Using this system, it is possible to strike the strings with drum sticks, providing a unique sound.</p>
+									<p>The strings are organized into fifths, meaning no matter where on the Bass you play, the instrument will produce viable sounding music.  A capo-like block can be used to alter the steps of all three strings providing a more dynamic playing experience.  This instrument can be played by one or two people.</p>
+								</div>
+							</div>
+						</li>
+						<li id="slide3">
+							<h3>Mahler Hammer</h3>
+							<div>
+								<div class="cbp-content">
+									<p>The Mahler Hammer was built for one purpose: noise.  The giant framework is designed to take heavy blows from a very large hammer.  The result of this is an incredibly deep, loud note that can fill an entire auditorium.</p> <p>  The hammer was made using an axe handle and four pieces of 4x4, to provide a very large striking capacity.  The strong design of the box ensures that it will survive through repeated blows.</p>
+								</div>
+							</div>
+						</li>
+						<li id="slide4">
+							<h3>Electric Guitar</h3>
+							<div>
+								<div class="cbp-content">
+									<p>The electrical guitar project takes a more technical approach to an instrument build.  The body was entirely designed using CAD in order to make sure every detail is present.  This file can then be C and C routed and sanded, and combined with other elements to form the rest of the instrument.  This project is still in progress.</p>
+									<img src="<%= image_path('instruments/guitar.jpg') %>" alt="img 01" />
+								</div>
+							</div>
+						</li>
+						<li id="slide5">
+							<h3>Other Projects</h3>
+							<div>
+								<div class="cbp-content">
+									<p>We're always looking for new ideas to build and perform with. 
+									Right now our exploratory projects 
+									include with with 3D printing and propane tank steel drums.</p>
+									<img src="<%= image_path('instruments/piano.jpg') %>" alt="img 01" />
+									
+								</div>
+							</div>
+						</li>
+					</ul>
+					<nav>
+						<a href="#slide1" class="icon-wolf"><span>PVC</span></a>
+						<a href="#slide2" class="icon-rabbit"><span>Slap Bass</span></a>
+						<a href="#slide3" class="icon-aligator"><span>Mahler Hammer</span></a>
+						<a href="#slide4" class="icon-turtle"><span>Electric Guitar</span></a>
+					    <a href="#slide5" class="icon-platypus"><span>Future Projects</span></a> 
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+	
+		<a name="id2"></a>
+		<section class="instruments-wilson-center">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>The Wilson Center</h2>
+						<p>The Wilson Center is a collaborative student metals workshop with such projects as the Solar Car and Baja Racing teams being just a couple of the organizations based here.  We use The Wilson Center for all of our projects, taking use of its resources to cut metal, wood, or anything else we choose to build.  Training is required to use the wilson center and can be found on the Wilson Center Website.  Additional training is also available for everything from mill training to advanced welding.</p>
+					</div>
+					<div class="col-md-6">
+				
+					</div>
+				</div>
+			
+			
+		</section>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.cbpContentSlider.min.js"></script>
+		<script>
+			
+			function scrollToAnchor(aid){
+        var aTag = $("a[name='"+ aid +"']");
+        $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+              }
+
+        $("#link1").click(function() {
+         scrollToAnchor('id1');
+          });
+          
+          
+        $("#link2").click(function() {
+        	scrollToAnchor('id2');
+        });
+        
+          
+		</script>
+		

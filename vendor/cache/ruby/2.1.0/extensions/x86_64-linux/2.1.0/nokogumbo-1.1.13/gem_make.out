@@ -1,0 +1,555 @@
+/usr/local/rvm/rubies/ruby-2.1.1/bin/ruby extconf.rb 
+checking for xmlNewDoc() in -lxml2... yes
+checking for nokogiri.h in /home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri... yes
+checking for nokogiri.h in /home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri... yes
+checking for gumbo_parse() in -lgumbo... no
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling parser.c
+parser.c: In function ‘all_attributes_match’:
+parser.c:428:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < attr1->length; ++i) {
+                     ^
+parser.c: In function ‘new_document_node’:
+parser.c:461:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboDocument* document = &document_node->v.document;
+   ^
+parser.c: In function ‘parser_add_parse_error’:
+parser.c:602:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboError* error = gumbo_add_error(parser);
+   ^
+parser.c:609:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboParserError* extra_data = &error->v.parser;
+   ^
+parser.c:617:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboParserState* state = parser->_parser_state;
+   ^
+parser.c:621:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < state->_open_elements.length; ++i) {
+                     ^
+parser.c: In function ‘tag_in’:
+parser.c:650:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   va_list tags;
+   ^
+parser.c: In function ‘node_tag_in’:
+parser.c:681:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboTag node_tag = node->v.element.tag;
+   ^
+In file included from parser.c:17:0:
+parser.c: In function ‘append_node’:
+parser.c:727:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   assert(node->index_within_parent == -1);
+                                    ^
+parser.c:728:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboVector* children;
+   ^
+In file included from parser.c:17:0:
+parser.c: In function ‘insert_node’:
+parser.c:746:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   assert(node->index_within_parent == -1);
+                                    ^
+parser.c:748:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboVector* children = &parent->v.element.children;
+   ^
+In file included from parser.c:17:0:
+parser.c:750:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   assert(index < children->length);
+                ^
+parser.c:755:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = index + 1; i < children->length; ++i) {
+                             ^
+parser.c: In function ‘foster_parent_element’:
+parser.c:768:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboNode* foster_parent_element = open_elements->data[0];
+   ^
+parser.c: In function ‘maybe_flush_text_node_buffer’:
+parser.c:810:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboNode* text_node = create_node(parser, buffer_state->_type);
+   ^
+parser.c: In function ‘pop_current_node’:
+parser.c:854:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboNode* current_node = gumbo_vector_pop(parser, &state->_open_elements);
+   ^
+parser.c: In function ‘append_comment_node’:
+parser.c:877:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboNode* comment = create_node(parser, GUMBO_NODE_COMMENT);
+   ^
+parser.c: In function ‘create_element_from_token’:
+parser.c:930:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboTokenStartTag* start_tag = &token->v.start_tag;
+   ^
+parser.c: In function ‘insert_foreign_element’:
+parser.c:1017:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboNode* element = create_element_from_token(parser, token, tag_namespace);
+   ^
+parser.c: In function ‘insert_text_token’:
+parser.c:1039:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   TextNodeBufferState* buffer_state = &parser->_parser_state->_text_node;
+   ^
+parser.c: In function ‘count_formatting_elements_of_tag’:
+parser.c:1100:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboElement* element = &node->v.element;
+     ^
+parser.c: In function ‘add_formatting_element’:
+parser.c:1116:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboVector* elements = &parser->_parser_state->_active_formatting_elements;
+   ^
+parser.c:1124:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int earliest_identical_element = elements->length;
+   ^
+parser.c: In function ‘is_open_element’:
+parser.c:1140:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < open_elements->length; ++i) {
+                     ^
+parser.c: In function ‘clone_node’:
+parser.c:1154:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboNode* new_node = gumbo_parser_allocate(parser, sizeof(GumboNode));
+   ^
+parser.c:1162:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboElement* element = &new_node->v.element;
+   ^
+parser.c:1165:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const GumboVector* old_attributes = &node->v.element.attributes;
+   ^
+parser.c:1167:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < old_attributes->length; ++i) {
+                     ^
+parser.c: In function ‘reconstruct_active_formatting_elements’:
+parser.c:1191:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int i = elements->length - 1;
+   ^
+parser.c:1214:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(; i < elements->length; ++i) {
+           ^
+In file included from parser.c:17:0:
+parser.c:1217:14: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     assert(i < elements->length);
+              ^
+parser.c:1220:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* clone = clone_node(
+     ^
+parser.c: In function ‘has_an_element_in_specific_scope’:
+parser.c:1288:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboVector tags;
+   ^
+parser.c:1303:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboTag node_tag = node->v.element.tag;
+     ^
+parser.c:1304:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int j = 0; j < expected->length; ++j) {
+                       ^
+parser.c:1313:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int j = 0; j < tags.length; ++j) {
+                       ^
+parser.c: In function ‘has_an_element_in_scope_with_tagname’:
+parser.c:1388:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   va_list args;
+   ^
+parser.c: In function ‘close_table’:
+parser.c:1465:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboNode* node = pop_current_node(parser);
+   ^
+parser.c: In function ‘close_table_cell’:
+parser.c:1479:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const GumboNode* node = get_current_node(parser);
+   ^
+parser.c: In function ‘merge_attributes’:
+parser.c:1616:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const GumboVector* token_attr = &token->v.start_tag.attributes;
+   ^
+parser.c:1619:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < token_attr->length; ++i) {
+                     ^
+parser.c: In function ‘gumbo_normalize_svg_tagname’:
+parser.c:1644:10: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        i < sizeof(kSvgTagReplacements) / sizeof(ReplacementEntry); ++i) {
+          ^
+parser.c: In function ‘adjust_foreign_attributes’:
+parser.c:1658:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const GumboVector* attributes = &token->v.start_tag.attributes;
+   ^
+parser.c:1660:10: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        i < sizeof(kForeignAttributeReplacements) /
+          ^
+parser.c: In function ‘adjust_svg_attributes’:
+parser.c:1678:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const GumboVector* attributes = &token->v.start_tag.attributes;
+   ^
+parser.c:1680:10: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        i < sizeof(kSvgAttributeReplacements) / sizeof(ReplacementEntry); ++i) {
+          ^
+parser.c: In function ‘adjust_mathml_attributes’:
+parser.c:1696:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboAttribute* attr = gumbo_get_attribute(
+   ^
+parser.c: In function ‘remove_from_parent’:
+parser.c:1746:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboVector* children = &node->parent->v.element.children;
+   ^
+parser.c:1753:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = index; i < children->length; ++i) {
+                         ^
+parser.c: In function ‘adoption_agency_algorithm’:
+parser.c:1816:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* furthest_block = NULL;
+     ^
+parser.c:1818:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+          j < state->_open_elements.length; ++j) {
+            ^
+parser.c:1820:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+       GumboNode* current = state->_open_elements.data[j];
+       ^
+parser.c:1844:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* common_ancestor =
+     ^
+parser.c:1852:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int bookmark = gumbo_vector_index_of(
+     ^
+parser.c:1855:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* node = furthest_block;
+     ^
+In file included from parser.c:17:0:
+parser.c:1872:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       assert(node_index < state->_open_elements.capacity);
+                         ^
+parser.c:1885:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+       int formatting_index = gumbo_vector_index_of(
+       ^
+In file included from parser.c:17:0:
+parser.c:1893:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         assert(bookmark <= state->_active_formatting_elements.length);
+                         ^
+parser.c:1920:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* new_formatting_node = clone_node(
+     ^
+parser.c:1928:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboVector temp = new_formatting_node->v.element.children;
+     ^
+parser.c:1934:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < temp.length; ++i) {
+                       ^
+parser.c:1946:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int formatting_node_index = gumbo_vector_index_of(
+     ^
+In file included from parser.c:17:0:
+parser.c:1955:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     assert(bookmark <= state->_active_formatting_elements.length);
+                     ^
+parser.c:1962:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int insert_at = gumbo_vector_index_of(
+     ^
+In file included from parser.c:17:0:
+parser.c:1965:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     assert(insert_at <= state->_open_elements.length);
+                      ^
+parser.c: In function ‘finish_parsing’:
+parser.c:1992:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboParserState* state = parser->_parser_state;
+   ^
+parser.c: In function ‘handle_in_head_noscript’:
+parser.c:2203:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     const GumboNode* node = pop_current_node(parser);
+     ^
+parser.c: In function ‘destroy_node’:
+parser.c:2269:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < doc->children.length; ++i) {
+                           ^
+parser.c:2279:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < node->v.element.attributes.length; ++i) {
+                         ^
+parser.c:2283:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < node->v.element.children.length; ++i) {
+                         ^
+parser.c: In function ‘handle_in_body’:
+parser.c:2352:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* body_node = state->_open_elements.data[1];
+     ^
+parser.c:2369:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboVector* children = &parser->_output->root->v.element.children;
+     ^
+parser.c:2370:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < children->length; ++i) {
+                       ^
+parser.c:2383:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < state->_open_elements.length; ++i) {
+                       ^
+parser.c:2402:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < state->_open_elements.length; ++i) {
+                       ^
+parser.c:2528:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboVector* open_elements = &state->_open_elements;
+     ^
+parser.c:2554:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboTag token_tag = token->v.end_tag;
+     ^
+parser.c:2572:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+       const GumboNode* current_node = get_current_node(parser);
+       ^
+parser.c:2674:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* node = insert_element_from_token(parser, token);
+     ^
+parser.c:2719:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboVector* token_attrs = &token->v.start_tag.attributes;
+     ^
+parser.c:2735:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     TextNodeBufferState* text_state = &parser->_parser_state->_text_node;
+     ^
+parser.c:2753:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* input = insert_element_of_tag_type(
+     ^
+parser.c:2755:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < token_attrs->length; ++i) {
+                       ^
+parser.c:2768:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboAttribute* name =
+     ^
+parser.c:2812:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboInsertionMode state = parser->_parser_state->_insertion_mode;
+     ^
+parser.c:2884:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboTag end_tag = token->v.end_tag;
+     ^
+parser.c: In function ‘handle_in_table_text’:
+parser.c:3065:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < buffer->length; ++i) {
+                       ^
+parser.c: In function ‘handle_in_row’:
+parser.c:3241:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < parser->_parser_state->_open_elements.length; ++i) {
+                         ^
+parser.c:3250:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* last_element = pop_current_node(parser);
+     ^
+parser.c: In function ‘handle_after_body’:
+parser.c:3458:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* html = parser->_parser_state->_open_elements.data[0];
+     ^
+parser.c: In function ‘handle_in_foreign_content’:
+parser.c:3705:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboNode* node = get_current_node(parser);
+     ^
+parser.c:3707:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboStringPiece token_tagname = token->original_text;
+     ^
+parser.c:3717:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i = parser->_parser_state->_open_elements.length;
+     ^
+parser.c: In function ‘handle_token’:
+parser.c:3774:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const GumboNode* current_node = get_current_node(parser);
+   ^
+parser.c: In function ‘gumbo_parse_with_options’:
+parser.c:3817:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboParserState* state = parser._parser_state;
+   ^
+parser.c:3822:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int loop_count = 0;
+   ^
+parser.c:3836:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     const char* token_type = "text";
+     ^
+parser.c:3886:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboDocument* doc_type = &parser._output->document->v.document;
+   ^
+parser.c: In function ‘gumbo_destroy_output’:
+parser.c:3916:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < output->errors.length; ++i) {
+                     ^
+compiling util.c
+compiling attribute.c
+attribute.c: In function ‘gumbo_get_attribute’:
+attribute.c:30:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < attributes->length; ++i) {
+                     ^
+compiling tag.c
+compiling nokogumbo.c
+In file included from nokogumbo.c:28:0:
+/home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri/nokogiri.h:13:0: warning: "_GNU_SOURCE" redefined [enabled by default]
+ #define _GNU_SOURCE
+ ^
+In file included from /usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/ruby.h:24:0,
+                 from /usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby.h:33,
+                 from nokogumbo.c:21:
+/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux/ruby/config.h:17:0: note: this is the location of the previous definition
+ #define _GNU_SOURCE 1
+ ^
+nokogumbo.c: In function ‘walk_tree’:
+nokogumbo.c:98:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     char name[tag.length+1];
+     ^
+nokogumbo.c:106:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboVector* attrs = &node->attributes;
+   ^
+nokogumbo.c:107:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i=0; i < attrs->length; i++) {
+                   ^
+nokogumbo.c:113:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboVector* children = &node->children;
+   ^
+nokogumbo.c:114:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i=0; i < children->length; i++) {
+                   ^
+nokogumbo.c: In function ‘Init_nokogumboc’:
+nokogumbo.c:172:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   VALUE Nokogiri = rb_const_get(rb_cObject, rb_intern("Nokogiri"));
+   ^
+nokogumbo.c:194:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   VALUE Gumbo = rb_define_class("Nokogumbo", rb_cObject);
+   ^
+compiling utf8.c
+utf8.c:82:1: warning: ‘static’ is not at beginning of declaration [-Wold-style-declaration]
+ uint32_t static inline decode(uint32_t* state, uint32_t* codep, uint32_t byte) {
+ ^
+utf8.c:82:1: warning: ‘inline’ is not at beginning of declaration [-Wold-style-declaration]
+utf8.c: In function ‘add_error’:
+utf8.c:111:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   uint64_t code_point = 0;
+   ^
+utf8.c: In function ‘read_char’:
+utf8.c:130:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   uint32_t code_point = 0;
+   ^
+utf8.c:143:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+         const char* next = c + 1;
+         ^
+utf8.c: In function ‘utf8iterator_maybe_consume_match’:
+utf8.c:242:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < length; ++i) {
+                       ^
+compiling tokenizer.c
+tokenizer.c: In function ‘tokenizer_add_parse_error’:
+tokenizer.c:204:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboTokenizerState* tokenizer = parser->_tokenizer_state;
+   ^
+tokenizer.c: In function ‘temporary_buffer_equals’:
+tokenizer.c:376:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   return text_len == buffer->length &&
+                   ^
+tokenizer.c: In function ‘emit_current_tag’:
+tokenizer.c:543:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < tag_state->_attributes.length; ++i) {
+                       ^
+tokenizer.c: In function ‘abandon_current_tag’:
+tokenizer.c:566:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < tag_state->_attributes.length; ++i) {
+                     ^
+tokenizer.c: In function ‘add_duplicate_attr_error’:
+tokenizer.c:760:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboTagState* tag_state = &parser->_tokenizer_state->_tag_state;
+   ^
+tokenizer.c: In function ‘finish_attribute_name’:
+tokenizer.c:784:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboVector* /* GumboAttribute* */ attributes = &tag_state->_attributes;
+   ^
+tokenizer.c:785:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < attributes->length; ++i) {
+                     ^
+tokenizer.c:798:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboAttribute* attr = gumbo_parser_allocate(parser, sizeof(GumboAttribute));
+   ^
+tokenizer.c: In function ‘finish_attribute_value’:
+tokenizer.c:823:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboAttribute* attr =
+   ^
+tokenizer.c: In function ‘gumbo_lex’:
+tokenizer.c:2931:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int c = utf8iterator_current(&tokenizer->_input);
+     ^
+tokenizer.c:2933:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     StateResult result =
+     ^
+tokenizer.c: In function ‘gumbo_token_destroy’:
+tokenizer.c:2964:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < token->v.start_tag.attributes.length; ++i) {
+                         ^
+compiling string_piece.c
+string_piece.c: In function ‘gumbo_string_copy’:
+string_piece.c:46:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   char* buffer = gumbo_parser_allocate(parser, source->length);
+   ^
+compiling vector.c
+vector.c: In function ‘enlarge_vector_if_full’:
+vector.c:54:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+       size_t num_bytes = sizeof(void*) * vector->capacity;
+       ^
+vector.c: In function ‘gumbo_vector_index_of’:
+vector.c:85:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < vector->length; ++i) {
+                     ^
+In file included from vector.c:19:0:
+vector.c: In function ‘gumbo_vector_insert_at’:
+vector.c:97:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   assert(index <= vector->length);
+                ^
+vector.c: In function ‘gumbo_vector_remove_at’:
+vector.c:117:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   assert(index < vector->length);
+                ^
+vector.c:118:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   void* result = vector->data[index];
+   ^
+compiling char_ref.c
+char_ref.rl: In function ‘consume_numeric_ref’:
+char_ref.rl:156:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int digit = parse_digit(c, is_hex);
+   ^
+char_ref.rl:165:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int codepoint = 0;
+   ^
+char_ref.rl:181:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int replacement = maybe_replace_codepoint(codepoint);
+   ^
+char_ref.rl: In function ‘consume_named_ref’:
+char_ref.rl:2472:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const char* p = utf8iterator_get_char_pointer(input);
+   ^
+char_ref.rl:2489:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     char last_char = *(te - 1);
+     ^
+char_ref.rl: In function ‘consume_char_ref’:
+char_ref.rl:2525:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int c = utf8iterator_current(input);
+   ^
+compiling string_buffer.c
+compiling error.c
+error.c: In function ‘print_message’:
+error.c:39:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int remaining_capacity = output->capacity - output->length;
+   ^
+error.c: In function ‘print_tag_stack’:
+error.c:79:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < error->tag_stack.length; ++i) {
+                     ^
+error.c:83:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     GumboTag tag = (GumboTag) error->tag_stack.data[i];
+     ^
+error.c: In function ‘find_last_newline’:
+error.c:139:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const char* c = error_location;
+   ^
+error.c: In function ‘gumbo_add_error’:
+error.c:159:57: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (max_errors >= 0 && parser->_output->errors.length >= max_errors) {
+                                                         ^
+error.c:162:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   GumboError* error = gumbo_parser_allocate(parser, sizeof(GumboError));
+   ^
+error.c: In function ‘gumbo_caret_diagnostic_to_string’:
+error.c:231:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   const char* line_start =
+   ^
+error.c:244:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int num_spaces = error->position.column - 1;
+   ^
+error.c: In function ‘gumbo_destroy_errors’:
+error.c:275:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < parser->_output->errors.length; ++i) {
+                     ^
+linking shared-object nokogumboc.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nokogumboc.so ./.gem.20141130-5026-1ipe5og
+installing default nokogumboc libraries

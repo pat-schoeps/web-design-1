@@ -1,0 +1,127 @@
+
+<div class="container" id="homepage">
+<div class="wrapper">
+
+  <div class="row">
+    <div class= "col-md-12">
+        <h1 class="title" id="jumbotron-title">Experimental Musical Instruments</h1>
+    </div>
+  </div>
+    
+    <div class="row">
+      <div class="col-md-12" id="bottom-title">
+        <h2 class="title">Design. Build. Play.</h2>
+        <h2 class="title-paragraph">We are a group dedicated to spreading musical interest through the creation and performance of musical instruments.</h2>
+      </div>
+      <%= link_to "Sign up now", signup_path, class: "btn btn-lg btn-primary homebutton" %>
+      
+    </div>
+    
+  
+</div>
+
+<div class="grid1">
+ 
+    <figure class="effect-ruby">
+        <img src="<%= image_path('img/1.jpg') %>" alt="img 01" />                                                 
+        <figcaption>
+            <h2>Build <span>Instruments</span></h2>
+            <p>Find your passion</p>
+            <a href="#"><%= link_to "Experimental",    instruments_path %></a>
+        </figcaption>         
+    </figure>
+    
+    <figure class="effect-sadie">
+      <img src="<%= image_path('img/2.jpg') %>" alt="img 02" />
+      <figcaption>
+        <h2>Perform <span>Together</span></h2>
+        <p>Practice and create music</p>
+        <a href="#"><%= link_to "Performance",     performance_path %></a>
+      </figcaption>
+    </figure>
+    
+    <figure class="effect-layla">
+      <img src="<%= image_path('img/10.jpg') %>" alt="img 010" />
+      <figcaption>
+        <h2>Process: <span>How we build</span></h2>
+        <p>Bringing together software and creativity</p>
+        <a href="#"><%= link_to "Process",       process_path %></a>
+      </figcaption>
+    </figure>
+ 
+    <figure class="effect-dexter">
+      <img src="<%= image_path('img/4.jpg') %>" alt="img 04" />
+      <figcaption>
+        <h2>Design: <span>CAD, Pen, and Paper</span></h2>
+        <p>Bringing together students</p>
+        <a href="#"><%= link_to "Design",         design_path  %></a>
+      </figcaption>
+    </figure>
+    
+    <figure class="effect-bubba">
+      <img src="<%= image_path('img/5.jpg') %>" alt="img 05" />
+      <figcaption>
+        <h2>Contact: <span>Get in touch</span></h2>
+        <p>Get Involved</p>
+        <a href="#"><%= link_to "Contact",     contact_path %></a>
+      </figcaption>
+    </figure>
+    
+    <figure class="effect-sarah">
+      <img src="<%= image_path('img/7.jpg') %>" alt="img 07" />
+      <figcaption>
+        <h2>Sign Up: <span>Get Connected</span></h2>
+        <p>Get involved today</p>
+        <a href="#"><%= link_to "Sign Up",         signup_path %>   </a>
+      </figcaption>
+    </figure>
+     
+</div>
+
+
+<!--
+<h1 class="ptitle">Projects</h1>
+
+<div class= "row" id="project-row">
+    <div class= "col-md-4">
+      <a href="http://mysterious-tundra-3307.herokuapp.com/pvc">
+        <div class="project-container container-pvc">
+          <h2>PVC</h2>
+        </div>
+      </a>
+    </div>
+    
+    <div class="col-md-4">
+      <a href="http://mysterious-tundra-3307.herokuapp.com/design">
+        <div class="project-container container-design">
+          <h2>Design</h2>
+        </div>
+      </a>
+    </div>
+  
+    
+    
+    <div class="col-md-4">
+      <a href="http://mysterious-tundra-3307.herokuapp.com/performance">
+        <div class="project-container container-performance">
+          <h2>Performance</h2>
+        </div>
+      </a>
+    </div>
+
+</div>
+-->
+</div>
+
+<script>
+      // Wait for 'polymer-ready'. Ensures the element is upgraded.
+      // window.addEventListener('polymer-ready', function(e) {
+       //  var ajax = document.querySelector('core-ajax');
+
+        // Respond to events it fires.
+        // ajax.addEventListener('core-response', function(e) {
+          // console.log(this.response);
+       //  });
+</script>
+
+      

@@ -1,0 +1,408 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@media (max-width: 767px) { 
+    .navbar-nav.pull-right { float: none!important; }
+}
+
+/* mixins, variables, etc. */
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:   border-box;
+}
+
+$gray-medium-light: #eaeaea;
+$dark-blue: #428bca;
+$light-blue: #0CE3E8;
+$pink: #FC1068;
+$purple: #1F0441;
+$yellow: #F9CE07;
+$gray-style: #4A4A4A;
+
+
+/* universal */
+
+html {
+ overflow-y: scroll; 
+ overflow-x: hidden;
+}
+
+body {
+   /* padding-top: 60px; */
+  width: 100%; 
+}
+
+ul {
+  /*list-style: none;*/
+}
+
+
+.container {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+
+section {
+  overflow: auto; 
+}
+
+/*.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+*/
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-family: Arial;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+
+header {
+  height: 3em;
+  width: 100%;
+  background-color: $gray-style;
+  opacity: .7;
+  
+}
+
+.navbar-nav {
+    position: relative;
+    float: right;
+    li > a {
+      color: #FFFECC;
+      text-transform: strong;
+      text-transform: bold;
+      transition: color .5s, background-color .5s, opacity .5s; 
+      &:hover {
+        color: $gray-light;
+        opacity: 1;
+        background-color: white;
+      }
+    }
+  }
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+ /* &:hover {
+    color: white;
+    text-decoration: none;
+  } */
+}
+
+/* footer */
+
+footer {
+  clear: both;
+  margin-top: 50%;
+  padding-top: 5px;
+  border-top: 1px solid white-light;
+  color: $gray-style;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-style;
+      text-decoration: none;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+
+/* Jumbotron */
+#homepage {
+  width: 100%;
+  padding: 0px;
+ 
+}
+.wrapper {
+
+    height: 37em;
+    width: 100%;
+    background-image: url('http://i.stack.imgur.com/jGlzr.png');
+    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+    border-bottom: 2px solid gray;
+    .title  {
+      color: #efefef;
+      text-decoration: bold;
+      font-size: 3em;
+    }
+    .homebutton {
+      position: relative;
+      margin-left: 45%;
+    }
+    
+    #jumbotron-title {
+      font-size: 4em;
+    }
+    .title-paragraph {
+      font-size: 1.5em;
+      color: #efefef;
+    }
+    }
+
+    #bottom-title {
+      margin-top: 8em;
+    }
+
+    .col-md-12 {
+      margin-top: 5em;
+    }
+
+
+
+
+/* Projects */
+
+
+  .ptitle {
+    float: center;
+    margin-top: .85em;
+  }
+
+  .row {
+    clear: both;
+      .col-md-4 {
+          /*position: absolute;*/
+          a {
+            text-decoration: none;
+          }
+        
+      }
+  }
+
+/*  original three topics
+
+#project-row {
+  margin: 6px;
+}
+
+.project-container {
+    height: 25em;
+    width: 85%;
+    margin: auto;
+    position: relative;
+    background-color: white;
+    h2 {
+      position: relative;
+      padding-top: 45%;
+      color:  white;
+      font-size: 3em;
+    }
+    a {
+      text-decoration: none;
+    }
+}
+
+
+/*  original three topics
+
+.container-pvc {
+  background-image: url(https://unsplash.imgix.net/22/brick-wall.JPG?q=75&fm=jpg&s=384c1f50be9eebb14ce9f91080556c66);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.container-design {
+  background-image: url("http://www.horniman.ac.uk/media/w650h650/Ex_SoundDesigns__001-PS.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+.container-performance {
+  background-image: url("https://unsplash.imgix.net/17/unsplash_5252bb51404f8_1.JPG?q=75&fm=jpg&s=6059617524e078beda8a02f4d02fcb7a");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Contact page */
+
+.contact-row {
+  height: 35em;
+  background-image: asset_url('xmas.jpg');
+  border-bottom: 2px solid $gray-style;
+}
+
+.contact-column {
+  margin-top: 3em;
+  h1 h2{
+    margin-top: 1em;
+    font-size: 2em;
+  }
+  h1 {
+    color:white;
+    font-size: 4.25em;
+    padding: 1.5em;
+  }
+}
+
+.content-contact {
+  ul {
+    li {
+      list-style: none;
+      text-transform: strong;
+    }
+  }
+}
+
+.colored-gray {
+   color: $gray;
+  }
+
+/* miscellaneous */
+
+.userbox {
+  margin-top: 5em;
+}
+
+.debug_dump {
+  margin-top: 4em;
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar for user */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 2em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+      color: $gray-style;
+    }
+    h2 {
+      font-size: 1em;
+      text-align: left;
+      color: $gray-style;
+      margin-top: .75em;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input label {
+  height: auto !important;
+}
+
+.form_container {
+  margin-top:5em;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.alert {
+  margin-top: 3.5em;
+}
+
+.form-control {
+  margin: .5em;
+}
+
+.btn {
+  margin: .5em;
+}
+
+
+
+
+

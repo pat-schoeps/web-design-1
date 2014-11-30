@@ -1,0 +1,468 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$gray-medium-light: #eaeaea;
+$graydark: #141414;
+$dark-blue: #428bca;
+$light-blue: #0CE3E8;
+$pink: #FC1068;
+$purple: #1F0441;
+$yellow: #F9CE07;
+$gray-style: #4A4A4A;
+
+/* Needed for a fluid height: */
+html, body, .container, .main { 
+	height: 100%;
+
+
+}
+
+/* Jumbotron */
+
+.instruments-row {
+	background-color: #C4C3EE;
+	height: 34em;
+	margin-top: 3.6em;
+}
+
+.instruments-grid1 {
+	background-image: asset_url("instruments/tools.jpg");
+	height: 34em;
+	border-bottom: 3px solid $gray;
+	h1  {
+		margin-top: 3em;
+		color: white;
+		font-size: 4em;
+	}
+	
+}
+	
+.instruments-grid2 {
+	background-image: image_url("instruments/compass.1.jpg");
+	height: 34em;
+	border-bottom: 3px solid $gray;
+}
+
+/*top banner*/
+
+.instruments-top-banner {
+	height: 16.875em;
+  width: 105%;
+  margin-left: -1.05em;
+  background-color: white;
+  opacity: .85;
+  overflow-y: hidden;
+	
+	h2 {
+		font-size: 2.5em;
+		padding: 2.2em;
+		color: $gray-style;
+	}
+}
+
+
+/*bottom right box*/
+
+.instruments-bottom-right {
+
+  position: relative;
+  height: 16.875em;
+  width: 55%;
+  margin-left: 23em;
+  background-color: $gray;
+  opacity: 1;
+  overflow-y: hidden;
+  transition: opacity .5s;
+  transition: background-color .5s;
+  
+
+
+  h2 {
+  	font-size: 2.75em;
+  	transition: color .5s;
+  	opacity: 1;
+  	
+  }
+  
+
+  div {
+  	padding: 5.5em;
+}
+
+  a:hover {
+  	text-decoration: none;
+  }
+}
+
+
+.instruments-bottom-right  h2 {
+	opacity: 1;
+	z-index: 100;
+}
+
+.instruments-bottom-right:hover  {
+	opacity: 1;
+	background-color: white;
+}
+
+.instruments-bottom-right:hover h2 {
+	color: $gray-style;
+}
+
+/*bottom left box*/
+
+.instruments-bottom-left {
+	position: relative;
+	height: 16.875em;
+  width: 52.5%;
+  margin-left: -1.05em;
+  margin-top: -16.875em;
+  background-color: $graydark;
+  opacity: 1;
+  overflow-y: hidden;
+  transition: background-color .5s;
+
+
+  h2 {
+  	font-size: 2.75em;
+  	transition: color .5s;
+  	opacity: 1;
+  	color: white
+  }
+  
+
+  div {
+  	padding: 5em;
+}
+  a:hover {
+  	text-decoration: none;
+  }
+}
+
+.instruments-bottom-left  h2 {
+	opacity: 1;
+	z-index: 100;
+}
+
+.instruments-bottom-left:hover  {
+	opacity: 1;
+	background-color: white;
+}
+
+.instruments-bottom-left:hover h2 {
+	color: $gray-style;
+}
+
+
+
+/* background image for slider */
+
+.container-instruments-background {
+	width: 105%;
+  margin-top: -2em;
+  margin-left: -2em;
+  height: 47em;
+  padding: 2em;
+  
+  .train {
+  	margin-left: -2em;
+  	height: 47em;
+  	width: 105%;
+  	position: relative;
+  	display: block;
+  	z-index: 1;
+  }
+	
+}
+
+
+
+.cbp-content {
+	img {
+		margin: 1em;
+		border:  3px solid $gray;
+	}
+}
+
+
+
+/* main wrapper */
+.cbp-contentslider {
+	width: 80em;
+	height: 40em;
+	margin: 1em auto;
+	position: absolute;
+	border: 4px solid $gray;
+	margin-top: -43.5em;
+	margin-left: 7em;
+	z-index: 10;
+}
+
+.cbp-contentslider > ul {
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+.cbp-contentslider > ul li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 1em;
+	background: #fff;
+}
+
+/* Whithout JS, we use :target */
+.cbp-contentslider > ul li:target {
+	z-index: 100;
+}
+
+.cbp-contentslider nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 3.313em;
+	z-index: 1000;
+	border-top: 4px solid $gray;
+	overflow: hidden;
+}
+
+.cbp-contentslider nav a {
+	float: left;
+	display: block;
+	width: 20%;
+	height: 100%;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	color: $gray;
+	background: #fff;
+	outline: none;
+	text-align: center;
+	line-height: 3;
+	position: relative;
+	padding-left: 3.125em;
+	text-transform: uppercase;
+	border-right: 4px solid $gray;
+	-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.cbp-contentslider nav a span {
+	display: block;
+}
+
+.cbp-contentslider nav a:last-child {
+	border: none;
+	box-shadow: 1px 0 $gray; /* fills gap caused by rounding */
+}
+
+.cbp-contentslider nav a:hover {
+	background-color: $gray;		/* background-color: $gray; */
+	color: #fff;
+}
+
+.cbp-contentslider nav a.rc-active {
+	background-color: $gray;
+	color: #fff;
+}
+
+/* Iconfont for navigation and headings */
+.cbp-contentslider [class^="icon-"]:before, 
+.cbp-contentslider [class*=" icon-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	text-align: center;
+	speak: none;
+	font-weight: normal;
+	line-height: 2.5;
+	font-size: 2em;
+	position: absolute;
+	left: 10%;
+	top: 50%;
+	margin: -1.250em 0 0 0;
+	height: 2.500em;
+	width: 2.500em;
+	color: rgba(0,0,0,0.1);
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+.cbp-contentslider .icon-wolf:before {
+	content: "\50";
+}
+
+.cbp-contentslider .icon-rabbit:before {
+	content: "\53";
+}
+
+.cbp-contentslider .icon-turtle:before {
+	content: "\48";
+}
+
+.cbp-contentslider .icon-platypus:before {
+	content: "\39";
+}
+
+.cbp-contentslider .icon-aligator:before {
+	content: "\38";
+}
+*/
+.cbp-contentslider [class^="icon-"].rc-active:before, 
+.cbp-contentslider [class*=" icon-"].rc-active:before,
+.cbp-contentslider nav a:hover:before {
+	color: rgba(255,255,255,0.9);
+}
+
+.cbp-contentslider h3 {
+	font-size: 4em;
+	height: 2em;
+	line-height: 1.7;
+	font-weight: 300;
+	margin: 0 0 0.3em;
+	position: relative;
+	color: $gray;
+	text-transform: uppercase;
+	text-align: right;
+	letter-spacing: 0.3em;
+	padding: 0 0.2em 0 0;
+	border-bottom: 4px solid $gray;
+}
+
+.cbp-contentslider h3[class^="icon-"]:before, 
+.cbp-contentslider h3[class*=" icon-"]:before {
+	top: 0;
+	left: 0;
+	width: 2em;
+	line-height: 1;
+	height: 1.2em;
+	margin: 0;
+	color: $gray;
+}
+
+.cbp-contentslider li > div {
+	position: absolute;
+	top: 9em;
+	bottom: 3.313em;
+	width: 100%;
+	left: 0;
+	padding: 0 1em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.cbp-contentslider .cbp-content {
+	-webkit-column-rule: 1px dashed $gray;
+	-moz-column-rule: 1px dashed $gray;
+	column-rule: 1px dashed $gray;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-o-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 1em;
+	-moz-column-gap: 1em;
+	-o-column-gap: 1em;
+	column-gap: 1em;
+	vertical-align: top;	
+	padding: 1em 0;
+}
+
+.cbp-contentslider p {
+	color: $gray;
+	padding: 0 0.5em 0.4em;
+	margin: 0;
+	font-size: 1.2em;
+	font-weight: 300;
+	text-align: justify;
+	line-height: 1.6;
+}
+
+/*Wilson Center */
+
+.instruments-wilson-center {
+	overflow-x: hidden;
+	height: 40em;
+	width: 100%;
+	margin-top: 36.8em;
+	background-color: $gray-style;
+	padding: 1em;
+	
+	
+	h2 {
+		color: white;
+		size: 2em;
+	}
+	
+	p {
+		color: white;
+		size: 1em;
+	}
+}
+
+/* Media queries */
+
+@media screen and (max-width: 70em) { 
+	.cbp-contentslider p {
+		font-size: 100%;
+	}
+}
+
+@media screen and (max-width: 67.75em) {
+
+	.cbp-contentslider { font-size: 85%; }
+
+	.cbp-contentslider nav a[class^="icon-"]:before, 
+	.cbp-contentslider nav a[class*=" icon-"]:before {
+		left: 50%;
+		margin-left: -1.250em;
+	}
+
+	.cbp-contentslider nav a span {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 43em) {
+
+	.cbp-contentslider h3 {
+		font-size: 2em;
+	}
+
+	.cbp-contentslider .cbp-content {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
+	}
+
+	.cbp-contentslider li > div {
+		top: 5em;
+	}
+
+}
+
+@media screen and (max-width: 25em) { 
+	.cbp-contentslider { width: 20em; margin: 1em; }
+	.cbp-contentslider nav a { padding: 0;}
+	.cbp-contentslider h3[class^="icon-"]:before, 
+	.cbp-contentslider h3[class*=" icon-"]:before { display: none;}
+}

@@ -1,0 +1,186 @@
+have_library: checking for xmlNewDoc() in -lxml2... -------------------- yes
+
+"gcc -o conftest -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 conftest.c  -L. -L/usr/local/rvm/rubies/ruby-2.1.1/lib -Wl,-R/usr/local/rvm/rubies/ruby-2.1.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/usr/local/rvm/rubies/ruby-2.1.1/lib -L/usr/local/rvm/rubies/ruby-2.1.1/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 conftest.c  -L. -L/usr/local/rvm/rubies/ruby-2.1.1/lib -Wl,-R/usr/local/rvm/rubies/ruby-2.1.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/usr/local/rvm/rubies/ruby-2.1.1/lib -L/usr/local/rvm/rubies/ruby-2.1.1/lib -lruby -lxml2  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘xmlNewDoc’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlNewDoc; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlNewDoc; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlNewDoc; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 conftest.c  -L. -L/usr/local/rvm/rubies/ruby-2.1.1/lib -Wl,-R/usr/local/rvm/rubies/ruby-2.1.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/usr/local/rvm/rubies/ruby-2.1.1/lib -L/usr/local/rvm/rubies/ruby-2.1.1/lib -lruby -lxml2  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘xmlNewDoc’ [-Wimplicit-function-declaration]
+ int t(void) { xmlNewDoc(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlNewDoc(); return 0; }
+/* end */
+
+--------------------
+
+"gcc -o conftest -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 conftest.c  -L. -L/usr/local/rvm/rubies/ruby-2.1.1/lib -Wl,-R/usr/local/rvm/rubies/ruby-2.1.1/lib -lxml2    -lxml2  -Wl,-R -Wl,/usr/local/rvm/rubies/ruby-2.1.1/lib -L/usr/local/rvm/rubies/ruby-2.1.1/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+package configuration for libxml-2.0
+cflags: -I/usr/include/libxml2
+ldflags: 
+libs: -lxml2
+
+find_header: checking for nokogiri.h in /home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri... -------------------- yes
+
+"gcc -E -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 -I/usr/include/libxml2  conftest.c -o conftest.i"
+conftest.c:3:22: fatal error: nokogiri.h: No such file or directory
+ #include <nokogiri.h>
+                      ^
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <nokogiri.h>
+/* end */
+
+"gcc -E -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 -I/usr/include/libxml2 -I/home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri conftest.c -o conftest.i"
+In file included from conftest.c:3:0:
+/home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri/nokogiri.h:13:0: warning: "_GNU_SOURCE" redefined [enabled by default]
+ #define _GNU_SOURCE
+ ^
+In file included from /usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/ruby.h:24:0,
+                 from /usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux/ruby/config.h:17:0: note: this is the location of the previous definition
+ #define _GNU_SOURCE 1
+ ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <nokogiri.h>
+/* end */
+
+--------------------
+
+find_header: checking for nokogiri.h in /home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri... -------------------- yes
+
+"gcc -E -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I. -I/home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 -I/usr/include/libxml2  conftest.c -o conftest.i"
+In file included from conftest.c:3:0:
+/home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri/nokogiri.h:13:0: warning: "_GNU_SOURCE" redefined [enabled by default]
+ #define _GNU_SOURCE
+ ^
+In file included from /usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/ruby.h:24:0,
+                 from /usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux/ruby/config.h:17:0: note: this is the location of the previous definition
+ #define _GNU_SOURCE 1
+ ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <nokogiri.h>
+/* end */
+
+--------------------
+
+have_library: checking for gumbo_parse() in -lgumbo... -------------------- no
+
+"gcc -o conftest -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I. -I/home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 -I/usr/include/libxml2 -DNGLIB conftest.c  -L. -L/usr/local/rvm/rubies/ruby-2.1.1/lib -Wl,-R/usr/local/rvm/rubies/ruby-2.1.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -lxml2  -lxml2 -Wl,-R -Wl,/usr/local/rvm/rubies/ruby-2.1.1/lib -L/usr/local/rvm/rubies/ruby-2.1.1/lib -lruby -lgumbo -lxml2  -lxml2 -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘gumbo_parse’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))gumbo_parse; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))gumbo_parse; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))gumbo_parse; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.1.1/include/ruby-2.1.0 -I. -I/home/ubuntu/workspace/vendor/cache/ruby/2.1.0/gems/nokogiri-1.6.5/ext/nokogiri     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -std=c99 -I/usr/include/libxml2 -DNGLIB conftest.c  -L. -L/usr/local/rvm/rubies/ruby-2.1.1/lib -Wl,-R/usr/local/rvm/rubies/ruby-2.1.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -lxml2  -lxml2 -Wl,-R -Wl,/usr/local/rvm/rubies/ruby-2.1.1/lib -L/usr/local/rvm/rubies/ruby-2.1.1/lib -lruby -lgumbo -lxml2  -lxml2 -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘gumbo_parse’ [-Wimplicit-function-declaration]
+ int t(void) { gumbo_parse(); return 0; }
+ ^
+/usr/bin/ld: cannot find -lgumbo
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { gumbo_parse(); return 0; }
+/* end */
+
+--------------------
+
